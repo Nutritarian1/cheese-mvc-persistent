@@ -18,6 +18,10 @@ public class Category {
     @Size(min=3, max=15)
     private String name;
 
+    public List<Cheese> getCheeses() {
+        return cheeses;
+    }
+
     @OneToMany
     @JoinColumn(name = "category_id")
     private List<Cheese> cheeses = new ArrayList<>();
